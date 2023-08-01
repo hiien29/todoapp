@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.nav_outer {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    background-color: #555;
+    padding: 1rem;
+}
+
+.nav_inner {
+    display: flex;
+    /* padding: 0 1rem; */
+}
+
+.nav_inner p{
+    padding: 0 .5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,a:hover,a:visited{
+    color: inherit;
+}
+
+.form_outer {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+.form_header {
+    background-color: #ddd;
+    margin-top: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: .5rem 0;
+}
