@@ -28,9 +28,9 @@ a,a:hover,a:visited{
 }
 
 .form_outer {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     margin-top: 3%;
     border-radius: 10px;
 }
@@ -40,5 +40,59 @@ a,a:hover,a:visited{
     margin-top: 0;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    
+}
+
+.form_header p {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    color: #696969;
+}
+
+.form_outer label,
+.form_outer input {
+    display: block;
     padding: .5rem 0;
+    width: 90%;
+    margin: .5rem auto;
+}
+
+.form_outer input {
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn,
+.btn2 {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: right;
+}
+
+.btn button {
+    background-color: #00bfff;
+    color: white;
+    border: 1px solid #00bfff;
+    display: inline-block;
+    width: 12%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.btn2 button {
+    background-color: #00bfff;
+    color: white;
+    border: 1px solid #00bfff;
+    display: inline-block;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.reset_pass {
+    margin: 2rem 0;
+    text-align: center;
+    color: #00bfff;
 }

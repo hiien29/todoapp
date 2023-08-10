@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\FolderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,23 @@ Route::get('/register', function () {
 Route::get('/forget', function () {
     return view('guest.forget_pass');
 })->name('forget');
+
+// Route::get('/login', function () {
+//     return view('login.toppage');
+// })->name('top');
+
+Route::controller(TaskController::class)->group(function()
+{
+    Route::get('/index/{id}','show')->name('index');
+    Route::get('/folders/{id}/create', 'showCreateForm')->name('tasks.create');
+    Route::post('/folders/{id}/create', 'create');
+    Route::get('/folders/{id}/tasks/{task_id}/edit', 'showEditForm')->name('tasks.edit');
+    Route::post('/folders/{id}/tasks/{task_id}/edit', 'edit');
+});
+
+Route::controller(FolderController::class)->group(function()
+{
+    Route::get('/folders/create', 'showCreateForm')->name('folders.create');
+    Route::post('/folders/create', 'create');
+});
+

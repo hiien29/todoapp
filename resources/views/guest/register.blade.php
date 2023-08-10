@@ -1,11 +1,12 @@
 @include('layouts.guest_nav')
 
-<div class="login_outer">
-    <div>
-        <p>ログイン</p>
-    </div>
-    <div>
-        <form action="">
+
+    <form action="">
+    @csrf
+        <div class="form_outer">
+            <div class="form_header">
+                <p>会員登録</p>
+            </div>
             <div>
                 <label for="email">メールアドレス</label>
                 <input type="email" name="email" id="email">
@@ -22,8 +23,11 @@
                 <label for="password_conf">パスワード（確認）</label>
                 <input type="password" name="password_conf" id="password_conf">
             </div>
-            <button type="submit">送信</button>
-        </form>
+            <div class="btn">
+                <button type="submit">送信</button>
+            </div>
+        </div>
+    </form>
 
     </div>
 </div>

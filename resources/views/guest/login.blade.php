@@ -15,11 +15,13 @@
                 <label for="password">パスワード</label>
                 <input type="password" name="password" id="password">
             </div>
-            <button type="submit">送信</button>
+            <div class="btn">
+                <button type="submit">送信</button>
+            </div>
         </div>
     </form>
 
-    <div>
+    <div class="reset_pass">
         <a href="{{route('forget')}}">パスワードの変更はこちらから</a>
     </div>
     
