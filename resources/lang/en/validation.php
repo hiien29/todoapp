@@ -161,7 +161,10 @@ return [
     'attributes' => [
         'title' => 'タイトル',
         'folder' => 'フォルダ名',
-        'due_date' => '期限'
+        'due_date' => '期限',
+        'user_name' => 'ユーザー名',
+        'email' => 'メールアドレス',
+        'password' => 'パスワード'
 
     ],
 

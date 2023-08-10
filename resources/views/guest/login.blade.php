@@ -9,10 +9,16 @@
             </div>
             <div>
                 <label for="email">メールアドレス</label>
+                @error('email')
+                <p class="error_msg">{{$message}}</p>
+                @enderror
                 <input type="email" name="email" id="email">
             </div>
             <div>
                 <label for="password">パスワード</label>
+                @error('password')
+                <p class="error_msg">{{$message}}</p>
+                @enderror
                 <input type="password" name="password" id="password">
             </div>
             <div class="btn">

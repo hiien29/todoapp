@@ -78,3 +78,7 @@ a.my-navbar-item:hover {
 .error_msg {
     color: red;
 }
+
+main {
+    margin-top: 5%;
+}
