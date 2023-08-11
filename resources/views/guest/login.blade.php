@@ -1,7 +1,7 @@
 @include('layouts.guest_nav')
     
 
-    <form action="">
+<form method="POST" action="{{ route('login') }}">
     @csrf
         <div class="form_outer">
             <div class="form_header">

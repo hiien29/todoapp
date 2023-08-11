@@ -96,3 +96,18 @@ a,a:hover,a:visited{
     text-align: center;
     color: #00bfff;
 }
+
+.error_msg {
+    color: red;
+    margin-left: 5%;
+}
+
+.send {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.send a {
+    border-bottom: 1px solid;
+    color: blue;
+}

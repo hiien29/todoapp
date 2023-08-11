@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\FolderController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::get('/forget', function ()
     return view('guest.forget_pass');
 })->name('forget');
 
+Route::post('/forget',[HomeController::class, 'send'])->name('send');
 // Route::get('/login', function () {
 //     return view('login.toppage');
 // })->name('top');
@@ -62,3 +64,6 @@ Route::controller(HomeController::class)->group(function()
 });
 
 // Auth::routes();
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

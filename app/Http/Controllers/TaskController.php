@@ -6,17 +6,25 @@ use Illuminate\Http\Request;
 use App\Models\Folder;
 use Illuminate\Support\Facades\DB;
 use App\Models\Task;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
     //
     public function show(int $id){
 
-        $folders = Folder::all();
+        $user_id = Auth::id(); // ログインしているユーザーの id を取得
+        $folders = Folder::where('user_id', $user_id)->get();
         $current_folder = Folder::find($id);
+
+        if (!$current_folder || $current_folder->user_id !== $user_id) {
+            return redirect()->route('login'); 
+        }
+
         $tasks = $current_folder->tasks()->get();
-        
-        return view('login.index',compact('folders','id','tasks'));
+    
+        return view('login.index', compact('folders', 'id', 'tasks'));
+
     }
 
     public function showCreateForm(int $id) {

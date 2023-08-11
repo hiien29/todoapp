@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Folder;
+use Illuminate\Support\Facades\Auth;
 
 class FolderController extends Controller
 {
@@ -14,21 +15,32 @@ class FolderController extends Controller
     }
 
     public function create(Request $request)
-{
-    // フォルダモデルのインスタンスを作成する
-    $folder = new Folder();
-    $request->validate([
-        'folder' => 'required',
-    ]);
-    // タイトルに入力値を代入する
-    $folder->title = $request->title;
-    // インスタンスの状態をデータベースに書き込む
-    $folder->save();
+    {
+        
+        $request->validate([
+            'folder' => 'required',
+        ]);
+    
+        $folder = new Folder();
+        $folder->user_id = Auth::id(); // ログインユーザーのIDを指定
+        $folder->title = $request->folder;
+        $folder->save();
+    
+        // 他の処理
+    
+        return redirect()->route('index', [
+            'id' => $folder->id,
+        ]);
 
-    // dd($request->id);
 
-    return redirect()->route('index', [
-        'id' => $folder->id,
-    ]);
+        
+    }
 }
-}
+
+// dd($request->folder);
+        // return redirect()->route('index', [
+        //     'id' => $folder->id,
+        // ]);
+
+        // フォルダモデルのインスタンスを作成する
+        // $folder = new Folder;

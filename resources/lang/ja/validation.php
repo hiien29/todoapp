@@ -162,7 +162,7 @@ return [
         'title' => 'タイトル',
         'folder' => 'フォルダ名',
         'due_date' => '期限',
-        'user_name' => 'ユーザー名',
+        'name' => 'ユーザー名',
         'email' => 'メールアドレス',
         'password' => 'パスワード'
 

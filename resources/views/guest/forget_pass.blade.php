@@ -5,7 +5,7 @@
         <p>パスワード再発行</p>
     </div>
     <div> --}}
-    <form action="">
+    <form action="{{ route('send') }}" method="POST">
     @csrf
         <div class="form_outer">
             <div class="form_header">
