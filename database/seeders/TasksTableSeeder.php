@@ -28,3 +28,5 @@ class TasksTableSeeder extends Seeder
         }
     }
 }
+
+

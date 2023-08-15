@@ -8,7 +8,7 @@
                 <p>ログイン</p>
             </div>
             <div>
-                <label for="email">メールアドレス</label>
+                <label for="email">あメールアドレス</label>
                 @error('email')
                 <p class="error_msg">{{$message}}</p>
                 @enderror
